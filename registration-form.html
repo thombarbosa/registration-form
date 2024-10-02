@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-form</title>
+
+    <style>
+        :root {
+            --background-color: #121125;
+            --container-background: linear-gradient(#23223a, #121221) padding-box,
+                linear-gradient(45deg, red, blue, red, blue) border-box;
+            --input-background: #121224;
+            --input-hover-focus-background: linear-gradient(#1a1934, #121224) padding-box,
+                linear-gradient(45deg, blue, red) border-box;
+            --button-background: #121224;
+            --text-color: white;
+            --font-family: Arial, Helvetica, sans-serif;
+            --container-width: 100%;
+            --container-max-width: 400px;
+            --label-font-size: 18px;
+            --input-font-size: 16px;
+            --button-font-size: 18px;
+        }
+
+        body {
+            height: 100vh;
+            background-color: var(--background-color);
+            font-family: var(--font-family);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: var(--text-color);
+            font-size: 30px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .form-container {
+            display: block;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            padding: 20px;
+            width: var(--container-width);
+            max-width: var(--container-max-width);
+            height: auto;
+            background: var(--container-background);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .form-container:hover {
+            transform: scale(1.03);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-color);
+            font-size: var(--label-font-size);
+            margin: 10px 0;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid var(--text-color);
+            background-color: var(--input-background);
+            color: #fff;
+            border-radius: 5px;
+            font-size: var(--input-font-size);
+            margin-bottom: 15px;
+        }
+
+        input:is(:hover) {
+            border: 1px solid transparent;
+            outline: none;
+            transition: all 0.1s ease;
+            background: var(--input-hover-focus-background);
+        }
+
+        input:is(:focus) {
+            border: 2px solid transparent;
+            outline: none;
+            transition: all 0.1s ease;
+            background: var(--input-hover-focus-background);
+        }
+
+        .btn-submit-form {
+            display: block;
+            width: 50%;
+            padding: 10px;
+            border: 1px solid var(--text-color);
+            background-color: var(--button-background);
+            color: #fff;
+            border-radius: 5px;
+            font-size: var(--button-font-size);
+            cursor: pointer;
+            margin: 15px auto;
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            margin: 25px auto;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 1.5s ease-in-out;
+            text-align: center;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" class="form-container">
+        <h1>Registration</h1>
+        <label for="name" class="label-name">Name:</label>
+        <input type="text" class="input-name" placeholder="Your name here" required>
+        <label for="email" class="label-email">Email:</label>
+        <input type="email" class="input-email" placeholder="email@example.com" required>
+        <label for="password" class="label-password">Password:</label>
+        <input type="password" class="input-password" placeholder="Your password here" required>
+        <label for="confirm-password" class="label-confirm-password">Confirm Password:</label>
+        <input type="password" class="input-confirm-password" placeholder="Confirm your password" required>
+        <input type="submit" class="btn-submit-form" value="Submit">
+        <a href="#">I already have an account</a>
+    </form>
+
+</body>
+
+</html>
